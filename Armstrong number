@@ -1,20 +1,21 @@
-public class JavaExample {
-
-    public static void main(String[] args) {
-
-        int num = 370, number, temp, total = 0;
-
-        number = num;
-        while (number != 0)
-        {
-            temp = number % 10;
-            total = total + temp*temp*temp;
-            number /= 10;
-        }
-
-        if(total == num)
-            System.out.println(num + " is an Armstrong number");
-        else
-            System.out.println(num + " is not an Armstrong number");
-    }
-}
+import java.util.*;
+import java.io.*;
+class Armstrong{  
+  public static void main(String[] args)  {  
+    int c=0,a,temp,n;
+    Scanner s=new Scanner(System.in);
+    System.out.print("Enter a number : ");
+    n=s.nextInt();
+    temp=n;  
+    while(n>0)  
+    {  
+      a=n%10;  
+      n=n/10;  
+      c=c+(a*a*a);  
+    }  
+    if(temp==c)  
+      System.out.println("armstrong number");   
+    else  
+      System.out.println("Not armstrong number");   
+   }  
+}  
